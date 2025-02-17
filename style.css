@@ -1,0 +1,240 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    animation: fadeIn 2s ease-in-out;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+p {
+    margin: 10px 0;
+    animation: colorChange 5s infinite;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+header {
+    padding: 20px;
+    color: #2c3e50; /* Change text color to match the rest of the headings */
+    animation: slideDown 1s ease-in-out;
+}
+
+footer {
+    background-color: #3498db;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 10px 10px 10px rgba(85, 31, 1, 0.1);
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+#intro {
+    text-align: center;
+}
+
+#info {
+    text-align: center;
+}
+
+#about img {
+    max-width: 300px;
+    border-radius: 150%;
+    display: block;
+    margin: 20px auto;
+    animation: fadeIn 2s ease-in-out;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    animation: fadeIn 2s ease-in-out;
+}
+
+th {
+    background-color: #4c4e4f;
+    color: white;
+}
+
+@keyframes colorChange {
+    0% { color: #333; }
+    25% { color: #e74c3c; }
+    50% { color: #f1c40f; }
+    75% { color: #2ecc71; }
+    100% { color: #3498db; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#left-icon {
+    position: fixed;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    background-color: #3498db;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+#left-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#left-icon span {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#right-image {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInRight 1s ease-in-out;
+}
+
+nav {
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #3498db;
+    font-size: 18px;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+#login-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white; /* White background color */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 400px;
+}
+
+#login-popup h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #3498db; /* Blue text color */
+}
+
+#login-popup input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#login-popup button {
+    width: 80%; /* Reduce the width of the submit button */
+    padding: 10px; /* Reduce the padding of the submit button */
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 14px; /* Reduce the font size of the submit button */
+}
+
+#login-popup button:hover {
+    background-color: #2980b9;
+    color: white; /* Keep text color white on hover */
+}
+
+#login-popup-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333; /* Dark close button color */
+}
