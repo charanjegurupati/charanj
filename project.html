@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="C:\Users\chara\Downloads\lion-head.png" type="image/x-icon">
+    <style>
+        #right-image-container {
+            position: relative;
+            width: 350px;
+            height: 350px; 
+            float: right;
+            margin-left: 20px;
+        }
+
+        #right-image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%; 
+            transition: opacity 0.3s;
+        }
+
+        #right-image-hover {
+            opacity: 0;
+            width: auto;
+            height: auto;
+        }
+
+        #right-image-container:hover #right-image-hover {
+            opacity: 1;
+        }
+
+        #right-image-container:hover #right-image {
+            opacity: 0;
+        }
+
+        table {
+            width: 50%; /* Decrease table width to half */
+        }
+
+        #top-right-links {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        #top-right-links a {
+            margin-left: 10px;
+            text-decoration: none;
+            color: black;
+        }
+
+        #login-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white; /* White background color */
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            width: 400px;
+        }
+
+        #login-popup h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #3498db; /* Blue text color */
+        }
+
+        #login-popup input {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        #login-popup button {
+            width: 100%;
+            padding: 15px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            font-size: 16px;
+        }
+
+        #login-popup button:hover {
+            background-color: #2980b9;
+            color: white; /* Keep text color white on hover */
+        }
+
+        #login-popup-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            cursor: pointer;
+            font-size: 24px;
+            color: #333; /* Dark close button color */
+        }
+
+        header {
+            padding: 20px;
+            color: #2c3e50; /* Change text color to match the rest of the headings */
+            animation: slideDown 1s ease-in-out;
+        }
+
+        footer {
+            background-color: #3498db;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="top-right-links">
+        <a href="login.html">Login</a>
+        <a href="mydetails.html">MyDetails</a>
+    </div>
+
+    <div id="intro-video-container">
+        <video id="intro-video" width="100%" autoplay muted>
+            <source src="C:\Users\chara\Downloads\Your paragraph text.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div id="main-content" style="display: none;">
+        <header>
+            <h1>Welcome to My Personal Website</h1>
+        </header>
+
+        <nav>
+            <a href="certificates.html">Certificates</a>
+            <a href="mywork.html">My Work</a>
+            <a href="firstwebsite.html">My First Website</a>
+        </nav>
+
+        <h2>About Me</h2>
+        <p>Hi, I'm charan. I am a passionate individual who loves coding, design, and technology. This is a small
+            personal website to showcase my details.</p>
+
+        <div id="right-image-container">
+            <img src="C:\Users\chara\Downloads\Cc.jpg" alt="Large Image" id="right-image">
+            <img src="C:\Users\chara\OneDrive\Pictures\charan2.jpg" alt="Second Image" id="right-image-hover">
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Charan. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <div id="login-popup">
+        <span id="login-popup-close">&times;</span>
+        <h2>Login</h2>
+        <input type="text" id="name" placeholder="Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="tel" id="number" placeholder="Phone Number">
+        <button id="submit-button">Submit</button>
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
